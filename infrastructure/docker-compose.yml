@@ -22,7 +22,7 @@ services:
   telegraf:
     image: telegraf:latest
     volumes:
-      -./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./telegraf.conf:/etc/telegraf/telegraf.conf:ro
     depends_on:
       - mosquitto
       - influxdb
