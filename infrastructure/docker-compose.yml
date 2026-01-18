@@ -19,7 +19,13 @@ services:
       - influxdb
     volumes:
       - grafana-data:/var/lib/grafana
-
+  telegraf:
+    image: telegraf:latest
+    volumes:
+      -./telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - mosquitto
+      - influxdb
 volumes:
   influx-data:
   grafana-data:
