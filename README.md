@@ -22,7 +22,4 @@ You can acces the webinterface of InfluxDB via http://[RASPBERRY_PI_IP]:8086
 
 ## Access
 The web interface can be accessed within the local network:
-
 URL: http://[RASPBERRY_PI_IP]:3000
-
-Dashboard: Navigate to the "Sleep Quality" dashboard to view live CO2, temperature, and humidity metrics.
