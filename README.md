@@ -7,13 +7,16 @@ The system tracks CO2 levels, temperature, and humidity using a sensor node in t
 ## Tech Stack
 Hardware: ESP8266 (NodeMCU) and Sensirion SCD41 (Photoacoustic CO2 sensor).
 
-Enclosure: Custom 3D-printed housing designed to isolate the sensor from microcontroller heat.
+Enclosure: Custom 3D-printed housing designed to isolate the sensor from microcontroller heat. (Work in Progress)
 
 Transport: MQTT (Mosquitto) for lightweight data transmission.
 
 Infrastructure: Docker-based stack running on a Raspberry Pi.
 
 Data Pipeline: Telegraf (Data collector), InfluxDB 2.x (Time-series database), and Grafana (Visualization).
+
+### API Access
+You have to create API-keys in InfluxDB to give the other Services access to the Database!
 
 ## Data Flow
 The ESP8266 reads sensor data via I2C every 5 seconds and publishes a JSON payload to the MQTT Broker.

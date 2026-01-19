@@ -48,7 +48,7 @@ void handle_sensor() {
     Wire.write(0x05); // LSB
     Wire.endTransmission();
     
-    delay(1); // Kurze Pause für den Sensor
+    delay(1); // short pause for sensor
 
     Wire.requestFrom(SCD41_ADDR, 9);
     if(Wire.available() == 9){
